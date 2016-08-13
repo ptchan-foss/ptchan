@@ -1,0 +1,80 @@
+{% filter remove_whitespace %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>{{ settings.title }}</title>
+        <link rel="stylesheet" media="screen" href="{{ config.url_stylesheet }}"/>
+        <link rel="stylesheet" media="screen" href="{{ config.root }}{{ settings.css }}"/>
+        {% if config.url_favicon %}<link rel="shortcut icon" href="{{ config.url_favicon }}" />{% endif %}
+        {% if config.default_stylesheet.1 != '' %}<link rel="stylesheet" type="text/css" id="stylesheet" href="{{ config.uri_stylesheets }}{{ config.default_stylesheet.1 }}">{% endif %}
+        {% if config.font_awesome %}<link rel="stylesheet" href="{{ config.root }}{{ config.font_awesome_css }}">{% endif %}
+
+        <style>
+            ol, ul {
+                padding-right: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        {{ boardlist.top }}
+        <header>
+            <h1>{{ settings.title }}</h1>
+            <div class="subtitle">{{ settings.subtitle }}</div>
+        </header>
+
+        <div class="ban" id="global">
+            <h2>Regras Gerais</h2>
+            <ol>
+                <li>Se agires como um imbecil, serás tratado como um imbecil.</li>
+                <li>Em caso de ambiguidade ou dúvida, o bom senso prevalece.</li>
+                <li>É proibido postar, divulgar, linkar ou discutir sobre qualquer tipo de conteúdo que viole as leis portuguesas.</li>
+                <li>É proíbido qualquer material que explore/exponha de alguma forma, crianças ou adolescentes menores de 18 anos de idade.</li>
+                <li>É proíbida a partilha de imagens pessoais de indivíduos que não sejam figuras públicas com o objetivo de assédio dos mesmos.</li>
+                <li>O uso de abreviaturas e outro tipo de "escrita da Internet" é fortemente desencorajado. A qualidade dos posts é importante para a comunidade, assume-se que os membros são capazes de escrever como pessoas maduras.</li>
+                <li>É proibido o uso deste imageboard por parte de menores de 18 anos. Não é trabalho da moderação saber se estão a fingir serem menores de idade ou não.</li>
+                <li>É proibido qualquer tipo de flood, spam, ou publicidade.</li>
+                <li>Discussões sobre o site em si e as suas políticas de moderação só são permitidas na board /meta/. </li>
+                <li>Ghostbump não é tolerado. Se vais bumpar uma thread antiga, é bom que tenhas algo interessante para acrescentar.</li>
+                <li>Em caso de qualquer tipo de violação as regras, a moderação tem ao direito de bloquear o acesso do infractor ao site por um período de tempo ao seu critério, e em casos que justifiquem encaminhar os dados do infractor para as autoridades competentes.</li>
+                <li>Não postes conteúdo NSFW fora das boards NSFW (/b/, /pol/ e /xxx/).</li>
+                <li>Não fujas ao assunto tratado pela board.</li>
+                <li>Respeita o tópico do fio/thread.</li>
+                <li>Temos baixa tolerância a trolls.</li>
+            </ol>
+
+            <h2>/b/</h2>
+            <ol>
+                <li>No /b/ apenas se aplicam as regras gerais 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 e 11</li>
+            </ol>
+
+            <h2>/pol/</h2>
+            <ol>
+                <li>Debate, conspirações e discussões políticas são bem vindas. És livre de expor os teus pensamentos.</li>
+                <li>Não atacar os outros users gratuitamente. Desafiem-se uns aos outros, mas mantenham-se civilizados.</li>
+            </ol>
+
+            <h2>/xxx/</h2>
+            <ol>
+                <li>Se vais iniciar uma thread, tem a certeza que tens pelo menos 5 imagens ou webms relevantes para postar.</li>
+                <li>O /xxx/ não é uma board de pedidos. Se não tiveres nada a acrescentar a um fio, abstém-te de comentar.</li>
+                <li>O ptchan não é uma linkboard. Se estás a pensar postar links para imagens ou vídeos em vez de os postares directamente, não o faças.</li>
+            </ol>
+
+            <h2>/meta/</h2>
+            <ol>
+                <li>Posts não construtivos ou com o objectivo de destabilizar serão apagados e o criador banido indeterminadamente.</li>
+                <li>Estrutura bem a tua crítica ou sugestão, caso contrário será ignorada.</li>
+            </ol>
+
+            <h2>Aviso</h2>
+            <ul>
+                <li>Desrespeitar qualquer uma das regras poderá resultar numa punição condizente com a infração, que poderá ou não ser permanente. Faz posts conscientemente.</li>
+                <li>Usa o report somente quando necessário. Coisas como "Fui trollado e quero que banam esse user" e "Meu gosto > teu gosto" serão ignoradas. Fazer spam de reports também dá direito a ban, especialmente se a razão for fútil.</li>
+                <li>Não existem regras da internet aqui, existem apenas as regras do próprio chan.</li>
+                <li><strong>Existem outros imageboards na internet. Se não concordas com as regras, utiliza outro imageboard.</strong></li>
+            </ul>
+        </div>
+    </body>
+</html>
+{% endfilter %}

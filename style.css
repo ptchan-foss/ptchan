@@ -1,0 +1,20 @@
+@import url("stylesheets/style.css");
+
+/* single line config links */
+div#expand-all-images,
+div#shrink-all-images,
+div#color-ids,
+div#watch-pin,
+div.treeview,
+div#watch-thread,
+div#gallery-view,
+div#watch-board,
+div.quicklink {
+	display: inline;
+	padding: 0 5px 2px;
+	float: right;
+	text-align: right;
+}
+hr {
+    clear: both;
+}
