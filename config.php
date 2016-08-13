@@ -70,7 +70,8 @@ $config['boards'] = array(
     array(
         '<b>regras</b>' => '/regras.html',
         '<b>https</b>' => 'https://ptchan.net',
-        'antigo' => 'https://kusaba.ptchan.net'
+        'antigo' => 'https://kusaba.ptchan.net',
+        'git' => 'https://github.com/ptchan-foss'
     )
 );
 
