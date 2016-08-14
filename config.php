@@ -187,7 +187,7 @@ $config['additional_javascript'][] = 'js/webm-settings.js';
 $config['additional_javascript'][] = 'js/expand-video.js';
 $config['webm']['use_ffmpeg'] = true;
 $config['webm']['allow_audio'] = true;
-$config['webm']['max_length'] = 120;
+$config['webm']['max_length'] = 180;
 
 /*
  * ====================
