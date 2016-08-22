@@ -26,6 +26,14 @@ $config['field_email_selectbox'] = true;
 
 
 /*
+* ====================
+*  Ban settings
+* ====================
+*/
+$config['ban_appeals'] = true;
+$config['ban_appeals_min_length'] = 0;
+
+/*
  * ====================
  *  Markup settings
  * ====================
