@@ -185,6 +185,7 @@ $config['additional_javascript'][] = 'js/wPaint/8ch.js';
 $config['additional_javascript'][] = 'js/wpaint.js';
 $config['additional_javascript'][] = 'js/upload-selection.js';
 
+
 /*
  * =========================
  *  Webm support
@@ -196,6 +197,54 @@ $config['additional_javascript'][] = 'js/expand-video.js';
 $config['webm']['use_ffmpeg'] = true;
 $config['webm']['allow_audio'] = true;
 $config['webm']['max_length'] = 180;
+
+
+/*
+ * =========================
+ *  Country block
+ * =========================
+ */
+
+// set to NULL to allow all countries
+$config['allowed_countries'] = array('PT');
+
+$config['filters'][] = array(
+	'condition' => array(
+		'custom' => function($post) {
+            require 'inc/lib/geoip/geoip.inc';
+            require 'allowed_ips.php';
+            global $config;
+
+            $gi = geoip\geoip_open('inc/lib/geoip/GeoIPv6.dat', GEOIP_STANDARD);
+
+            // taken from post.php
+            function ipv4to6($ip) {
+                if (strpos($ip, ':') !== false) {
+                    if (strpos($ip, '.') > 0)
+                        $ip = substr($ip, strrpos($ip, ':')+1);
+                    else return $ip; // native ipv6
+                }
+                $iparr = array_pad(explode('.', $ip), 4, 0);
+                $part7 = base_convert(($iparr[0] * 256) + $iparr[1], 10, 16);
+                $part8 = base_convert(($iparr[2] * 256) + $iparr[3], 10, 16);
+                return '::ffff:'.$part7.':'.$part8;
+            }
+
+            // get the country code
+            $country_code = geoip\geoip_country_code_by_addr_v6($gi, ipv4to6($_SERVER['REMOTE_ADDR']));
+
+            if (is_null($config['allowed_countries']))
+                return false;
+
+            if (in_array($country_code, $config['allowed_countries']) || in_array($_SERVER['REMOTE_ADDR'], $allowed_ips))
+                return false;
+            else
+                return true;
+        }
+    ),
+    'action' => 'reject',
+    'message' => 'Posting from your country is not allowed on this board.'
+);
 
 /*
  * ====================
