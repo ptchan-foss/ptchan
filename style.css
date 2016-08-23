@@ -18,3 +18,7 @@ div.quicklink {
 hr {
     clear: both;
 }
+
+.padded {
+    padding: 1em;
+}

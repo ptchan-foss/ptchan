@@ -76,6 +76,7 @@ $config['boards'] = array(
 	array('int', 'luso'),
 	array('meta'),
     array(
+        '<b>info</b>' => '/info.html',
         '<b>regras</b>' => '/regras.html',
         '<b>https</b>' => 'https://ptchan.net',
         'antigo' => 'https://kusaba.ptchan.net',
