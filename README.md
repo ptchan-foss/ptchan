@@ -9,7 +9,3 @@ Configurações mais sensíveis não foram obviamente incluídas neste repositó
 - `templates/themes/` - temas (add-ons) criados/alterados para o ptchan.net
 - `img/banners/` - banners em rotação no ptchan
 - `static/` - ficheiros estáticos (imagens)
-
-## TO-DO
-
-- Criar stylesheet Pylon

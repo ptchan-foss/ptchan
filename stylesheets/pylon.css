@@ -1,0 +1,126 @@
+body {
+    background: #33343D;
+    color: #DDDDDD;
+    font-family: tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+}
+
+a:link, a:visited, a:link:hover, .intro a.email span.name {
+    color: #99CFCE;
+}
+
+a.post_no {
+    color: #FFFFFF;
+}
+
+div.post.reply {
+    background: #434248;
+    border: solid 1px #58575f;
+}
+
+div.post.reply.highlighted {
+    background: #43424B;
+    border: solid 2px #58576f;
+}
+
+div.post.reply div.body a {
+    color: #99CFCE;
+}
+
+.intro span.subject, .intro span.name {
+    color: #FFFFFF;
+}
+
+header div.subtitle, h1, h2, h3, h4 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+form table tr th {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+div.ban h2 {
+    background: #2B2B33;
+    color: inherit;
+}
+
+div.ban {
+    background-color: #434248;
+    border-color: #BBBBBB;
+}
+
+div.ban p {
+    color: black;
+}
+
+div.pages {
+    padding: 7px 5px;
+    color: #FFFFFF;
+    background: none;
+    border: 1px solid;
+}
+
+div.pages a.selected {
+    color: #FFFFFF;
+}
+
+hr {
+    border-width: 1px;
+    border-style: solid none none none;
+    border-color: #BBBBBB;
+}
+
+div.boardlist {
+    color: #FFFFFF;
+}
+
+table.modlog tr th {
+    background: transparent;
+    color: #FFFFFF;
+}
+
+div.report {
+    color: #FFFFFF;
+}
+
+.banlist-opts .checkboxes label {
+    color: #FFFFFF !important;
+}
+
+.desktop-style div.boardlist:nth-child(1) {
+    background-color: #33343D;
+    border: none;
+}
+
+
+/* options.js */
+
+#options_div, #alert_div {
+    background: #33343D;
+    color: #FFFFFF;
+}
+
+.options_tab_icon {
+    border: 1px solid transparent;
+    border-width: 0px 1px 1px 0px;
+}
+
+.options_tab_icon:hover {
+    border-color: #BBBBBB;
+    border-width: 0px 1px 1px 0px;
+}
+
+.options_tab_icon.active {
+    border-color: #BBBBBB;
+    border-width: 1px 0px 0px 1px;
+}
+
+.dropzone {
+    background-color: white;
+    border: 1px solid #a9a9a9;
+}
