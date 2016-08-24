@@ -249,6 +249,14 @@ $config['filters'][] = array(
 
 /*
  * ====================
+ *  Flood/spam settings
+ * ====================
+ */
+$config['spam']['unicode'] = false;
+
+
+/*
+ * ====================
  *  Video embedding
  * ====================
  */
