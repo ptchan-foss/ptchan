@@ -12,5 +12,4 @@ Configurações mais sensíveis não foram obviamente incluídas neste repositó
 
 ## TO-DO
 
-- Criar tema multi-página para todas as páginas de informação (regras, FAQ, etc). Markdown possivelmente.
 - Criar stylesheet Pylon
