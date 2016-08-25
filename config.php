@@ -71,7 +71,7 @@ $config['file_icons']['torrent'] = 'torrent.png';
 $config['boards'] = array(
     array('*'),
 	array('b', 'pol', 'con'),
-	array('c', 'u', 'n', 't', 'sp', 'ndis'),
+	array('c', 'des', 'n', 'ndis', 't', 'u'),
 	array('xxx'),
 	array('int', 'luso'),
 	array('meta'),
