@@ -138,6 +138,7 @@ $config['additional_javascript'] = array();
 
 $config['additional_javascript'][] = 'js/jquery.min.js';             // jquery
 $config['additional_javascript'][] = 'js/jquery-ui.custom.min.js';   // jquery ui
+$config['additional_javascript'][] = 'js/strftime.min.js';           // strftime
 $config['additional_javascript'][] = 'js/ajax.js';                   // ajax functionality
 
 $config['additional_javascript'][] = 'js/local-time.js';            // local time
