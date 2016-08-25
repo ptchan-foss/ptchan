@@ -214,14 +214,14 @@ $config['allowed_countries'] = array('PT');
 $config['filters'][] = array(
 	'condition' => array(
 		'custom' => function($post) {
-            require 'inc/lib/geoip/geoip.inc';
-            require 'allowed_ips.php';
+            include_once 'inc/lib/geoip/geoip.inc';
+            include_once 'allowed_ips.php';
             global $config;
 
             $gi = geoip\geoip_open('inc/lib/geoip/GeoIPv6.dat', GEOIP_STANDARD);
 
             // taken from post.php
-            function ipv4to6($ip) {
+            function filter_ipv4to6($ip) {
                 if (strpos($ip, ':') !== false) {
                     if (strpos($ip, '.') > 0)
                         $ip = substr($ip, strrpos($ip, ':')+1);
@@ -234,7 +234,7 @@ $config['filters'][] = array(
             }
 
             // get the country code
-            $country_code = geoip\geoip_country_code_by_addr_v6($gi, ipv4to6($_SERVER['REMOTE_ADDR']));
+            $country_code = geoip\geoip_country_code_by_addr_v6($gi, filter_ipv4to6($_SERVER['REMOTE_ADDR']));
 
             if (is_null($config['allowed_countries']))
                 return false;
