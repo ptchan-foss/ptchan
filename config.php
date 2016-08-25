@@ -259,6 +259,14 @@ $config['spam']['unicode'] = false;
 
 /*
  * ====================
+ *  Mod permissions
+ * ====================
+ */
+$config['mod']['move'] = ADMIN;
+
+
+/*
+ * ====================
  *  Video embedding
  * ====================
  */
