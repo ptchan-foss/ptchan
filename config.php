@@ -23,6 +23,7 @@ $config['max_body'] = 7500;
 $config['reply_limit'] = 250;
 $config['max_links'] = 20;
 $config['field_email_selectbox'] = true;
+$config['enable_embedding'] = true; // video embedding
 
 
 /*
