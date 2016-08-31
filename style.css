@@ -22,3 +22,7 @@ hr {
 .padded {
     padding: 1em;
 }
+
+.banner {
+    padding: 0.2em 0;
+}
