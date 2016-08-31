@@ -100,6 +100,7 @@ $config['stylesheets']['Favela'] = 'favela.css';
 $config['stylesheets']['Futaba'] = 'futaba+vichan.css';
 $config['stylesheets']['Manel'] = 'gentoochan.css';
 $config['stylesheets']['Nigrachan'] = 'nigrachan.css';
+$config['stylesheets']['Nostalgia'] = 'nostalgia.css';
 $config['stylesheets']['Pylon'] = 'pylon.css';
 
 $config['default_stylesheet'] = array('Yotsuba', $config['stylesheets']['Yotsuba']);
